@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/addNewUrl" method="get">
+    <input type="text" name="urlName" placeholder="url名称"><br>
+    <input type="text" name="urlType" placeholder="请求类型"><br>
+    <input type="text" name="urlResponse" placeholder="返回数据">
+    <input type="submit" value="添加">
+</form>
+<ul>
+    {% for con in content %}
+    <li>
+        <p>urlName : {{con.urlName}}</p>
+        <P>urlType : {{con.urlType}}</P>
+        <p>urlRespose : {{con.urlResponse}}</p>
+        <form action="/deleteUrl" method="get">
+            <input type="hidden" name="id" value={{con.id}}>
+            <input type="submit" value="删除">
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
