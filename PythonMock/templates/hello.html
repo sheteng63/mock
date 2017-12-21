@@ -7,7 +7,8 @@
 <body>
 <form action="/addNewUrl" method="get">
     <input type="text" name="urlName" placeholder="url名称"><br>
-    <input type="text" name="urlType" placeholder="请求类型"><br>
+    <input type="radio" name="urlType" value="GET">GET
+    <input type="radio" name="urlType" value="POST">POST<br>
     <input type="text" name="urlResponse" placeholder="返回数据">
     <input type="submit" value="添加">
 </form>
@@ -20,6 +21,10 @@
         <form action="/deleteUrl" method="get">
             <input type="hidden" name="id" value={{con.id}}>
             <input type="submit" value="删除">
+        </form>
+        <form action="/updateForm" method="get">
+            <input type="hidden" name="id" value={{con.id}}>
+            <input type="submit" value="修改">
         </form>
     </li>
     {% endfor %}

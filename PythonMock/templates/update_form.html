@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+</head>
+<body>
+<form action="/updateUrl" method="get">
+    <input type="hidden" name="id" value={{ id }}>
+    <input type="text" name="urlName" value={{ urlName }}><br>
+    <input type="radio" name="urlType" value="GET">GET
+    <input type="radio" name="urlType" value="POST">POST<br>
+    <input type="text" name="urlResponse" value="{{urlResponse}}">
+    <input type="submit" value="修改提交">
+</form>
+</body>
+</html>
